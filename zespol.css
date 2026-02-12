@@ -1,5 +1,6 @@
 :root { --panel: rgba(11, 14, 22, 0.72); --border: rgba(255, 255, 255, 0.13); }
-.team-page { width: min(1600px, calc(100vw - 36px)); margin: 30px auto 60px; display: grid; gap: 18px; justify-content: stretch; }
+.team-page { width: min(1600px, calc(100vw - 36px)); margin: 30px auto 60px; display: grid; gap: 18px; justify-content: center; }
+.team-page > *{width:100%;min-width:0}
 .team-header,.card { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 16px; box-shadow: 0 12px 28px rgba(0,0,0,.24); min-width:0; }
 .team-header h1{margin:0 0 6px}.team-header p{margin:0;color:#d0d7e8}.card h3{margin:0 0 12px}.card h4,.card h5{margin:10px 0 8px;color:#d7ddea}
 .table-wrap{overflow-x:auto}
@@ -47,8 +48,8 @@
 .chips-row{display:flex;gap:5px;align-items:center;justify-content:center}
 .match-result-chip,.side-chip{border-radius:999px;padding:1px 7px;font-size:10px;font-weight:700;letter-spacing:.3px}
 .match-result-chip.win{background:rgba(63,185,80,.2);color:#7ce39a}.match-result-chip.loss{background:rgba(255,102,102,.2);color:#ff9a9a}.match-result-chip.draw{background:rgba(242,204,96,.22);color:#ffdf87}.side-chip{background:rgba(255,255,255,.14);color:#e8ecf7}
-.ranking-chart-wrap{margin:6px 0 14px;position:relative;width:100%;max-width:100%;min-width:0;height:320px;min-height:300px;overflow:hidden;contain:layout paint size}
-.ranking-chart-wrap canvas{display:block;position:absolute;inset:0;min-width:0 !important;width:100% !important;max-width:100% !important;height:100% !important;max-height:100% !important}
+.ranking-chart-wrap{margin:6px 0 14px;position:relative;width:100%;max-width:100%;min-width:0;height:320px;min-height:300px;overflow:hidden}
+.ranking-chart-wrap canvas{display:block;min-width:0 !important;width:100% !important;max-width:100% !important;height:100% !important}
 #topRankingTable{width:100%;border-collapse:separate;border-spacing:0;min-width:700px}
 #topRankingTable th,#topRankingTable td{border-bottom:1px solid rgba(255,255,255,.12);padding:10px 8px;text-align:left}
 #topRankingTable tbody tr:nth-child(odd){background:rgba(255,255,255,.03)}#topRankingTable tbody tr:hover{background:rgba(118,152,255,.11)}
