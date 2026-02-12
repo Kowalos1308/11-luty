@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postteam - Zespół</title>
+  <link rel="stylesheet" href="styl.css">
+  <link rel="stylesheet" href="zespol/zespol.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">STRONA GŁÓWNA</a>
+  <a href="youtube.html">YOUTUBE</a>
+  <a href="taktyki.html">TAKTYKI</a>
+  <div class="dropdown">
+    <button class="dropbtn">STATYSTYKI ▾</button>
+    <div class="dropdown-content">
+      <a href="gracze.html">STATYSTYKI GRACZY</a>
+      <a href="zespol.html">STATYSTYKI ZESPOŁU</a>
+    </div>
+  </div>
+</nav>
+
+<main class="team-page">
+  <header class="team-header">
+    <h1>Statystyki zespołu</h1>
+  </header>
+
+  <section class="card">
+    <h3>1) ROZKŁAD MECZY NA MIESIĄCE  CS 2</h3>
+    <div class="table-wrap">
+      <table id="yearBreakdownTable"></table>
+      <p class="table-hint">🟦 Najwięcej gier w danym roku • 🟩 Najlepszy miesięczny winrate • 🌸 Powyżej 15 gier</p>
+    </div>
+
+    <div class="split-charts">
+      <article>
+        <h4>Mecze w poszczególnych latach (narastająco)</h4>
+        <canvas id="monthlyMatchesByYearChart"></canvas>
+      </article>
+      <article>
+        <h4>Winrate w poszczególnych latach (narastająco)</h4>
+        <canvas id="monthlyWinrateByYearChart"></canvas>
+      </article>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>2) Proporcja wyników</h3>
+    <div class="result-layout">
+      <div class="result-chart-wrap"><canvas id="resultsChart"></canvas></div>
+      <div>
+        <div id="resultsSummary" class="result-summary"></div>
+        <div id="resultsExtra" class="result-extra"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>3) Ostatnie mecze (10)</h3>
+    <div id="recentMatches" class="recent-strip"></div>
+  </section>
+
+  <section class="card">
+    <h3>4) Zawodnicy</h3>
+    <div class="ranking-chart-wrap"><canvas id="playersMatchesCumulativeChart"></canvas></div>
+    <div class="table-wrap">
+      <table id="topRankingTable">
+        <thead><tr><th>Zawodnik</th><th>Najwięcej zabójstw</th><th>Najwięcej asyst</th><th>Najmniej zgonów</th><th>ADR</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>5) Statystyki map</h3>
+    <div class="split-charts map-top3-charts">
+      <article><h4>ILOŚĆ MECZY - MAPY TOP 3</h4><canvas id="topMapsCountChart"></canvas></article>
+      <article><h4>WINRATE - MAPY TOP 3</h4><canvas id="topMapsWinrateChart"></canvas></article>
+    </div>
+    <div class="map-slider">
+      <button id="mapPrev" class="slider-btn">◀</button>
+      <article id="mapCard" class="map-card"></article>
+      <button id="mapNext" class="slider-btn">▶</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="footer-content"><div class="footer-logo"><h2>POSTTEAM</h2><p>Amatorska drużyna CS • Office Specialists</p></div></div><div class="footer-bottom">© 2026 Postteam. All rights reserved.</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="zespol/app.js"></script>
+</body>
+</html>
